@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".General">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/sirius_bar"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/nav_menu3" />
+
+
+    <ScrollView
+        android:id="@+id/menu_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnve"
+        app:layout_constraintTop_toBottomOf="@+id/sirius_bar"
+        tools:ignore="UnknownIdInLayout">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/grid_menu"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            app:columnCount="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:orientation="horizontal"
+            tools:ignore="ScrollViewSize">
+
+            <RelativeLayout
+                android:id="@+id/GenRL1"
+                android:layout_width="wrap_content"
+                android:layout_height="130sp"
+                android:layout_margin="8dp"
+                android:background="@drawable/add_roundedbtn">
+
+                <ImageView
+                    android:id="@+id/gen_myportf"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:srcCompat="@drawable/gen_myportf"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_myPortf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/myPortfolio"
+                    android:textColor="@color/colorPrimary"
+                    app:backgroundTint="@color/nav_menu3" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/GenRL2"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/add_roundedbtn">
+
+                <ImageView
+                    android:id="@+id/gen_mytrnsct"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    app:srcCompat="@drawable/gen_mytrsct"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_myTransc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/myTranscript"
+                    android:textColor="@color/colorPrimary"
+                    app:backgroundTint="@color/nav_menu3" />
+            </RelativeLayout>
+
+
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_menu_old" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

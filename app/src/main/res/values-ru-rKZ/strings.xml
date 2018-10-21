@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_posts">Почта</string>
+    <string name="title_settings">Настройки</string>
+    <string name="myMarks">Мои оценки</string>
+    <string name="myPortfolio">Мое портфолио</string>
+    <string name="myTranscript">Мой транскрипт</string>
+    <string name="title_menu">Меню</string>
+    <string name="title_marks">Оценки</string>
+</resources>

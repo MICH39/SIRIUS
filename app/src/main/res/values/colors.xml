@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f5a80</color>
+    <color name="colorPrimaryDark">#233247</color>
+    <color name="colorAccent">#ffd01c</color>
+
+    //Цвет Меню
+    <color name="nav_menu3">#ffffff</color>
+</resources>
+
