@@ -5,9 +5,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".md_General">
+        tools:context=".General">
 
-        <include layout="@layout/md_general_context" />
+        <include layout="@layout/general_context" />
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottom_app_bar"

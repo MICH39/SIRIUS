@@ -3,11 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="org.mnmv.sirius">
 
-    <!-- To auto-complete the email text field in the u_login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,18 +22,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".md_General"
+            android:name=".General"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".md_Marks"
+            android:name=".MM"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login" />
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings" />

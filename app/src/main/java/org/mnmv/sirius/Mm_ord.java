@@ -9,12 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Marks_marks extends Fragment {
+public class Mm_ord extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.md_m_marks,container,false);
+        View view = inflater.inflate(R.layout.mm_ord,container,false);
 
         return view;
     }

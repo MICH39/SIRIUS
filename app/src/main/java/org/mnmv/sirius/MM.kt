@@ -1,32 +1,45 @@
 package org.mnmv.sirius
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 
+import com.google.android.material.tabs.TabLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.viewpager.widget.ViewPager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class md_General : AppCompatActivity() {
+class MM : AppCompatActivity() {
+
+    private var mSectionsPageAdapter: SectionsPageAdapter? = null
+    private var mViewPager: ViewPager? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.md_general)
+        setContentView(R.layout.mm)
 
-        //Верхняя
+        mSectionsPageAdapter = SectionsPageAdapter(supportFragmentManager)
+
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = findViewById(R.id.view_tabs)
+        setupViewPager(mViewPager!!)
+
         val myToolbar = findViewById<Toolbar>(R.id.bottom_app_bar)
         setSupportActionBar(myToolbar)
 
-        val fab_toMarks = findViewById<FloatingActionButton>(R.id.fab_marks)
-        fab_toMarks.setOnClickListener {
-            val go_toMarks = Intent(this@md_General, md_Marks::class.java)
-            startActivity(go_toMarks)
-            Toast.makeText(this, "Модуль оценок открыт", Toast.LENGTH_SHORT).show()
-            overridePendingTransition(0, 0)
+        val tabLayout = findViewById<TabLayout>(R.id.tabs)
+        tabLayout.setupWithViewPager(mViewPager)
+
+        val fab_toGen = findViewById<FloatingActionButton>(R.id.fab_undogen)
+        fab_toGen.setOnClickListener {
+            val go_toGen = Intent(this@MM, General::class.java)
+            startActivity(go_toGen)
         }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -49,5 +62,13 @@ class md_General : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
 
+    }
+
+    private fun setupViewPager(viewPager: ViewPager) {
+        val adapter = SectionsPageAdapter(supportFragmentManager)
+        adapter.addFragment(Mm_marks(), getString(R.string.marks))
+        adapter.addFragment(Mm_vedom(), getString(R.string.vedom))
+        adapter.addFragment(Mm_ord(), getString(R.string.ord))
+        viewPager.adapter = adapter
     }
 }

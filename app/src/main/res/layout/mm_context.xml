@@ -5,9 +5,9 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".md_Marks"
+    tools:context=".MM"
     tools:ignore="PrivateResource"
-    tools:showIn="@layout/md_marks">
+    tools:showIn="@layout/mm">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

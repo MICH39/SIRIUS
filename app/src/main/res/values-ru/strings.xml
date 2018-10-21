@@ -1,0 +1,99 @@
+<resources>
+    <string name="title_menu">Меню</string>
+    <string name="title_settings">Настройки</string>
+    <string name="myMarks">Оценки</string>
+    <string name="myPortfolio">Портфолио</string>
+    <string name="myTranscript">Транскрипт</string>
+    <string name="title_posts">Потча</string>
+    <string name="title_marks">Оценки</string>
+    <string name="title_activity_settings">Настройки</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">Основные</string>
+
+    <string name="pref_title_social_recommendations">Включить социальные рекомендации</string>
+    <string name="pref_description_social_recommendations">"Рекомендации для общения с людьми\n         на основе истории сообщений\n   "</string>
+
+    <string name="pref_title_display_name">Отображаемое имя</string>
+
+    <string name="pref_title_add_friends_to_messages">Добавить в друзья для общения</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Синхронизация &amp; данных</string>
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 минут</item>
+        <item>30 минут</item>
+        <item>1 час</item>
+        <item>3 часа</item>
+        <item>6 часов</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">Системные настройки синхронизации</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Уведомления</string>
+
+    <string name="pref_title_new_message_notifications">Уведомления о новых сообщениях</string>
+
+    <string name="pref_title_ringtone">Рингтон</string>
+    <string name="pref_ringtone_silent">Беззвучно</string>
+
+    <string name="pref_title_vibrate">Вибрация</string>
+    <!-- Strings related to u_login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Пароль (необязательно)</string>
+    <string name="action_sign_in">Войдите или зарегестрируйтесь</string>
+    <string name="action_sign_in_short">Войти</string>
+    <string name="error_invalid_password">Пароль короткий</string>
+    <string name="error_field_required">Это поле обязательное</string>
+    <string name="permission_rationale">Для предоставления электронной почты необходимы разрешения для доступа к электронной почте.\n         пополнения.</string>
+    <string name="tb_profile">Профиль</string>
+    <string name="pr_mymail">Почта</string>
+    <string name="logout">Выйти</string>
+    <string name="nav_sets">Настройки</string>
+    <string name="notifications">Уведомления</string>
+    <string name="marks">Оценки</string>
+    <string name="vedom">Ведомость</string>
+    <string name="ord">ОРД</string>
+    <string name="pref_default_display_name">Иван Иванов</string>
+    <string name="pref_title_sync_frequency">Частота синхронизации</string>
+    <string name="title_activity_login">Логин</string>
+    <string name="error_invalid_email">E-mail не найден</string>
+    <string name="error_incorrect_password">Неправильный пароль</string>
+</resources>
