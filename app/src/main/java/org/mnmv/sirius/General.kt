@@ -24,7 +24,7 @@ class General : AppCompatActivity() {
         fab_toMarks.setOnClickListener {
             val go_toMarks = Intent(this@General, MM::class.java)
             startActivity(go_toMarks)
-            Toast.makeText(this, "Модуль оценок открыт", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.mm_module_opened), Toast.LENGTH_SHORT).show()
             overridePendingTransition(0, 0)
         }
     }

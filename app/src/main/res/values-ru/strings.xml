@@ -31,7 +31,7 @@
     </string-array>
 
     <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Синхронизация &amp; данных</string>
+    <string name="pref_header_data_sync">Синхронизация данных</string>
 
     <string-array name="pref_sync_frequency_titles">
         <item>15 минут</item>
@@ -96,4 +96,5 @@
     <string name="title_activity_login">Логин</string>
     <string name="error_invalid_email">E-mail не найден</string>
     <string name="error_incorrect_password">Неправильный пароль</string>
+    <string name="mm_module_opened">Модуль оценок открыт</string>
 </resources>

@@ -101,4 +101,5 @@
     <string name="marks">Marks</string>
     <string name="vedom">Vedom</string>
     <string name="ord">ORD</string>
+    <string name="mm_module_opened">Marks Module was opened</string>
 </resources>
