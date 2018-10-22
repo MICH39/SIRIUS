@@ -1,6 +1,5 @@
 package org.mnmv.sirius
 
-
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -8,14 +7,15 @@ import android.view.MenuItem
 
 import com.google.android.material.tabs.TabLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MM : AppCompatActivity() {
 
     private var mSectionsPageAdapter: SectionsPageAdapter? = null
     private var mViewPager: ViewPager? = null
+    private var currentFabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,8 +27,9 @@ class MM : AppCompatActivity() {
         mViewPager = findViewById(R.id.view_tabs)
         setupViewPager(mViewPager!!)
 
-        val myToolbar = findViewById<Toolbar>(R.id.bottom_app_bar)
-        setSupportActionBar(myToolbar)
+        val bar = findViewById<BottomAppBar>(R.id.bottom_app_bar)
+        setSupportActionBar(bar)
+        bar.fabAlignmentMode = currentFabAlignmentMode
 
         val tabLayout = findViewById<TabLayout>(R.id.tabs)
         tabLayout.setupWithViewPager(mViewPager)
@@ -37,10 +38,18 @@ class MM : AppCompatActivity() {
         fab_toGen.setOnClickListener {
             val go_toGen = Intent(this@MM, General::class.java)
             startActivity(go_toGen)
+            overridePendingTransition(0, 0)
+            finish()
         }
 
 
     }
+
+    private fun BottomAppBar.toggleFabAlignment() {
+        currentFabAlignmentMode = fabAlignmentMode
+        fabAlignmentMode = currentFabAlignmentMode.xor(1)
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val menuInflater = menuInflater

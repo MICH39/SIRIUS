@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".General"
     android:id="@+id/nestedScrollView"
-    tools:showIn="@layout/genral"
+    tools:showIn="@layout/general"
     tools:ignore="PrivateResource">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
